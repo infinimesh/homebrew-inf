@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.0-r1"
+  version "3.0.0-r4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r1/inf_3.0.0-r1_Darwin_x86_64.tar.gz"
-      sha256 "347509aec9000980d6796f7c272b8315bfa793b725acc3574fee99873c12539d"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r4/inf_3.0.0-r4_Darwin_x86_64.tar.gz"
+      sha256 "fbbfee719b2b5855e47d0e130c0af11ba44711ce43c006f453cd32ab4d1126a2"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r1/inf_3.0.0-r1_Darwin_arm64.tar.gz"
-      sha256 "7894f54320640e4cb57060a9e568485c19497d506422940227bca26b03c4e807"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r4/inf_3.0.0-r4_Darwin_arm64.tar.gz"
+      sha256 "582490b2c2001e0dec90d82d98753064bb97130fc2e07f7d9fefac6091d6f03d"
 
       def install
         bin.install "inf"
@@ -29,16 +29,24 @@ class Inf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r1/inf_3.0.0-r1_Linux_arm64.tar.gz"
-      sha256 "d54a3faa29b48e3ff0deb0f885478d96e4397a1fc16e3ae55d261f47847bed47"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r4/inf_3.0.0-r4_Linux_arm64.tar.gz"
+      sha256 "5529dc125d191ec0be5cba88d49e810d9f8491567a296854e2aa7a42bb3eec0e"
+
+      def install
+        bin.install "inf"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r4/inf_3.0.0-r4_Linux_arm.tar.gz"
+      sha256 "06a5483d35d1fa2a28e33af7f95eb97c54fd1109bb6e634a5b19d1d92a0b9e29"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r1/inf_3.0.0-r1_Linux_x86_64.tar.gz"
-      sha256 "fd86b79a7aeea116e091d699f52d8efee1899d3f0dbb26660e9fdb6242da2286"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r4/inf_3.0.0-r4_Linux_x86_64.tar.gz"
+      sha256 "eac998804c78c832ba51f5bfffc947f738dc4f3b2f45adef0471aad73954d8ec"
 
       def install
         bin.install "inf"

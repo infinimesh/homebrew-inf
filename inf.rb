@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.0-r11"
+  version "3.0.0-r12"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r11/inf_3.0.0-r11_Darwin_x86_64.tar.gz"
-      sha256 "cbad7d52298099a4f7f439c0e6a937d64dc211dfb9ee785aa44fdbed1d16f42d"
+    if Hardware::CPU.arm?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Darwin_arm64.tar.gz"
+      sha256 "98e45985a1fe70d5cfc9c615b74e8a659665c9c774c2dec5a9efa7d91e09af55"
 
       def install
         bin.install "inf"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r11/inf_3.0.0-r11_Darwin_arm64.tar.gz"
-      sha256 "6326827f901a02711c18aa2eee104aa014e7a840e9df70cf44ed898e1e0bbf64"
+    if Hardware::CPU.intel?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Darwin_x86_64.tar.gz"
+      sha256 "cb96e1c44d786f3719da9752b6684ecd852bbbe11f4038e9fd307a8f513cf19b"
 
       def install
         bin.install "inf"
@@ -28,25 +28,17 @@ class Inf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r11/inf_3.0.0-r11_Linux_arm64.tar.gz"
-      sha256 "b8b3044351044c129195f61dcb6b95a756937e52d0a70c46e8ecade9d86155f7"
-
-      def install
-        bin.install "inf"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r11/inf_3.0.0-r11_Linux_x86_64.tar.gz"
-      sha256 "2b6537933b03bf751b7a142c0b49dcaa336d701a45e6ff4344879ed114a011b1"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Linux_x86_64.tar.gz"
+      sha256 "af7c2cbe1a0e8ea422c0e21da19092b2becee8f7fce01b7e4d3600b30909c220"
 
       def install
         bin.install "inf"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r11/inf_3.0.0-r11_Linux_arm.tar.gz"
-      sha256 "fb4e1be4e5c1158830812d5a270aee8c294459540bb5d261edc9a5d6e1120af8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Linux_arm64.tar.gz"
+      sha256 "86d712cb21b53ecf26ae0ddfe77ac02c46781e3b0d16592c8fe11bdbd70c2085"
 
       def install
         bin.install "inf"

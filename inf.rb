@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.0-r12"
+  version "3.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Darwin_arm64.tar.gz"
-      sha256 "98e45985a1fe70d5cfc9c615b74e8a659665c9c774c2dec5a9efa7d91e09af55"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Darwin_arm64.tar.gz"
+      sha256 "7a3f902e154237849913b12b5bb4715dba9e8925cb0d33655ccd6c9385d05492"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Darwin_x86_64.tar.gz"
-      sha256 "cb96e1c44d786f3719da9752b6684ecd852bbbe11f4038e9fd307a8f513cf19b"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Darwin_x86_64.tar.gz"
+      sha256 "60e155aef858e8dfd52f34eec67e5bbd0bde7362aa25467ca6cb271b876c8bd0"
 
       def install
         bin.install "inf"
@@ -28,17 +28,17 @@ class Inf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Linux_x86_64.tar.gz"
-      sha256 "af7c2cbe1a0e8ea422c0e21da19092b2becee8f7fce01b7e4d3600b30909c220"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Linux_arm64.tar.gz"
+      sha256 "0f7ac84c1bbf08552e1a01696562f6a07e1e7ea38b05497f398c3758d77cc307"
 
       def install
         bin.install "inf"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r12/inf_3.0.0-r12_Linux_arm64.tar.gz"
-      sha256 "86d712cb21b53ecf26ae0ddfe77ac02c46781e3b0d16592c8fe11bdbd70c2085"
+    if Hardware::CPU.intel?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Linux_x86_64.tar.gz"
+      sha256 "fa2c6c8c482cca5c3a0936882e9a2845cba12d53643a04708699cceff0bbc059"
 
       def install
         bin.install "inf"

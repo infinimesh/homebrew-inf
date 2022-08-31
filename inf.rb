@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.0"
+  version "3.0.0-r20"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Darwin_arm64.tar.gz"
-      sha256 "7a3f902e154237849913b12b5bb4715dba9e8925cb0d33655ccd6c9385d05492"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Darwin_arm64.tar.gz"
+      sha256 "8972dc741d4ed73c18e5a00aaf1e607c6d98a007c09731be16464e6598a9571f"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Darwin_x86_64.tar.gz"
-      sha256 "60e155aef858e8dfd52f34eec67e5bbd0bde7362aa25467ca6cb271b876c8bd0"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Darwin_x86_64.tar.gz"
+      sha256 "8054a96061bc97c26e4d149c8d8dc789a69e518f4953b5c7f466af146b992ecf"
 
       def install
         bin.install "inf"
@@ -29,16 +29,16 @@ class Inf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Linux_arm64.tar.gz"
-      sha256 "0f7ac84c1bbf08552e1a01696562f6a07e1e7ea38b05497f398c3758d77cc307"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Linux_arm64.tar.gz"
+      sha256 "50a9cf348f920f94d1ba2a0ece303ed84fe7a585a2f25f0ef5223a5f17b07aa6"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0/inf_3.0.0_Linux_x86_64.tar.gz"
-      sha256 "fa2c6c8c482cca5c3a0936882e9a2845cba12d53643a04708699cceff0bbc059"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Linux_x86_64.tar.gz"
+      sha256 "20b141dee37208bfcab76e0f3df1b0f2f13b8a56f6c15e3eba734028fb6f894f"
 
       def install
         bin.install "inf"
@@ -46,8 +46,9 @@ class Inf < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Start with inf help login ;)
-  EOS
+  def caveats
+    <<~EOS
+      Start with inf help login ;)
+    EOS
   end
 end

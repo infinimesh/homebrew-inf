@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.0-r20"
+  version "3.0.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Darwin_arm64.tar.gz"
-      sha256 "8972dc741d4ed73c18e5a00aaf1e607c6d98a007c09731be16464e6598a9571f"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Darwin_arm64.tar.gz"
+      sha256 "bbcf1708f47466c589ce4edad35cd6be6b2d0de06269038996e4640126608828"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Darwin_x86_64.tar.gz"
-      sha256 "8054a96061bc97c26e4d149c8d8dc789a69e518f4953b5c7f466af146b992ecf"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Darwin_x86_64.tar.gz"
+      sha256 "44bd676638c4deda80ceb1ccf0cee2d55190de1fd1ca075412930b80f6c089aa"
 
       def install
         bin.install "inf"
@@ -29,16 +29,16 @@ class Inf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Linux_arm64.tar.gz"
-      sha256 "50a9cf348f920f94d1ba2a0ece303ed84fe7a585a2f25f0ef5223a5f17b07aa6"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Linux_arm64.tar.gz"
+      sha256 "c88f73cc3e57214589a61cc5937549873b548308c3441002b98a775db3e549d3"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.0-r20/inf_3.0.0-r20_Linux_x86_64.tar.gz"
-      sha256 "20b141dee37208bfcab76e0f3df1b0f2f13b8a56f6c15e3eba734028fb6f894f"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Linux_x86_64.tar.gz"
+      sha256 "21b67d6a1973f201be889805de3ea199ea4d5611bf9df2281eaf6d4ac70e5ed0"
 
       def install
         bin.install "inf"

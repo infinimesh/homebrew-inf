@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.1"
+  version "3.0.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Darwin_arm64.tar.gz"
-      sha256 "bbcf1708f47466c589ce4edad35cd6be6b2d0de06269038996e4640126608828"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Darwin_arm64.tar.gz"
+      sha256 "ff4c6cf97ff8fbb79a347061400fbf3a5c39a4aefb17f95ee9fe037f94848d26"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Darwin_x86_64.tar.gz"
-      sha256 "44bd676638c4deda80ceb1ccf0cee2d55190de1fd1ca075412930b80f6c089aa"
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Darwin_x86_64.tar.gz"
+      sha256 "c4d0b9bd990a44d00b4d79b6bda207581beb9a68bd78844af2ca73b88b89d87c"
 
       def install
         bin.install "inf"
@@ -28,17 +28,17 @@ class Inf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Linux_arm64.tar.gz"
-      sha256 "c88f73cc3e57214589a61cc5937549873b548308c3441002b98a775db3e549d3"
+    if Hardware::CPU.intel?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Linux_x86_64.tar.gz"
+      sha256 "f335f6445569898aaa33a96b1b2fc23698b8e8b7b3bba2a742d134ec411a158e"
 
       def install
         bin.install "inf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.1/inf_3.0.1_Linux_x86_64.tar.gz"
-      sha256 "21b67d6a1973f201be889805de3ea199ea4d5611bf9df2281eaf6d4ac70e5ed0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Linux_arm64.tar.gz"
+      sha256 "b6c059024f7179ab55bae6808620fb9f7a0fdbc806478e697b5158f2b523976a"
 
       def install
         bin.install "inf"

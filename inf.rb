@@ -5,21 +5,21 @@
 class Inf < Formula
   desc "infinimesh Platform CLI"
   homepage "https://github.com/infinimesh/infinimesh"
-  version "3.0.5"
+  version "3.1.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Darwin_arm64.tar.gz"
-      sha256 "ff4c6cf97ff8fbb79a347061400fbf3a5c39a4aefb17f95ee9fe037f94848d26"
+      url "https://github.com/infinimesh/inf/releases/download/v3.1.2/inf_3.1.2_Darwin_arm64.tar.gz"
+      sha256 "40f50f48477aab3839a74f1814bac7c0a9cff984dac621129ab3ef8ee79305c1"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Darwin_x86_64.tar.gz"
-      sha256 "c4d0b9bd990a44d00b4d79b6bda207581beb9a68bd78844af2ca73b88b89d87c"
+      url "https://github.com/infinimesh/inf/releases/download/v3.1.2/inf_3.1.2_Darwin_x86_64.tar.gz"
+      sha256 "01d73a00a98f2241d2b1492d7a4c5d8ceed6a96494986b243168c084d652f112"
 
       def install
         bin.install "inf"
@@ -29,16 +29,16 @@ class Inf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Linux_x86_64.tar.gz"
-      sha256 "f335f6445569898aaa33a96b1b2fc23698b8e8b7b3bba2a742d134ec411a158e"
+      url "https://github.com/infinimesh/inf/releases/download/v3.1.2/inf_3.1.2_Linux_x86_64.tar.gz"
+      sha256 "0c74bca518dade8de67ec8e10a3af14a8d5fadfa364fa2e9b666e88413b42c24"
 
       def install
         bin.install "inf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/infinimesh/inf/releases/download/v3.0.5/inf_3.0.5_Linux_arm64.tar.gz"
-      sha256 "b6c059024f7179ab55bae6808620fb9f7a0fdbc806478e697b5158f2b523976a"
+      url "https://github.com/infinimesh/inf/releases/download/v3.1.2/inf_3.1.2_Linux_arm64.tar.gz"
+      sha256 "e566f58865bc98fa1a9f806d12018b30b36d7f793811ffb33286231c42860374"
 
       def install
         bin.install "inf"
